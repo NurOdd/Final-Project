@@ -1,8 +1,9 @@
-<template>
+<template >
   <h1>Task App</h1>
+  <RouterView/>
 </template>
 <script setup>
- console.log (process.env.NODE_ENV )
+//  console.log (process.env.NODE_ENV )
 </script>
 <style scoped>
 </style>

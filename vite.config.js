@@ -5,8 +5,18 @@ import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [vue()],
-
-  build: {outDir: 'docs'},
-
-  base: process.env.NODE_ENV === 'produccion' ? '/Final-project' : '/'
+//carpeta donde creara el build
+build: {
+  outDir: 'docs',
+  rollupOptions: {
+      output: {
+          entryFileNames: `assets/file_[name].[hash].js`,
+          chunkFileNames: `assets/file_[name].[hash].js`,
+          assetFileNames: `assets/file_[name].[hash].[ext]`,
+      },
+  }
+},
+//comprobar si estamos en produccion y la base es el nombre del repositorio, si no es la raiz
+//condicion ? "nombre-repositorio" : "/"
+  base: process.env.NODE_ENV === 'production' ? '/Final-project' : '/'
 })
