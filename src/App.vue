@@ -1,10 +1,14 @@
 <template >
-   <RouterView/> 
-   <h1>Task App</h1>
+   <Welcome/>
 
 </template>
 <script setup>
-//  console.log (process.env.NODE_ENV )
+import Welcome from './views/Welcome.vue'
+import Home from './views/Home.vue'
+
+
 </script>
+
+
 <style scoped>
 </style>
