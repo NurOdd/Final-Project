@@ -1,7 +1,8 @@
 <!-- pagina de entrada donde hacer log in y sign up -->
 
 <template>
- <SignUp></SignUp>
+ <SignUp/>
+ <LogIn/>
 
 
 </template>
