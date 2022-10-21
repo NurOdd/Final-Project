@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <div></div>
+        <div>Sign Up</div>
         <div></div>
         <div></div>
         <div></div>
