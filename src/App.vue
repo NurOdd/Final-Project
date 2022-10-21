@@ -1,11 +1,8 @@
 <template >
-   <Welcome/>
-
-
+<RouterView/>
 </template>
 <script setup>
-import Welcome from './views/Welcome.vue';
-import Home from './views/Home.vue';
+
 
 </script>
 

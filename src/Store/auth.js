@@ -15,12 +15,14 @@ export const useAuthStore = defineStore('auth', {
         login(id) {
             // TODO cambiar el estado  de autenticacion e id del usuario
             this.id = id;
-            isAuth = true;
+            this.isAuth = true;
 
         },
 
         logout(){
             // TODO cambiar el estado de autenticacion e id del usuario
+            this.id = "";
+            this.isAuth = false;
         }
     }
 })

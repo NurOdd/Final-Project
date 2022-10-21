@@ -2,7 +2,7 @@
 <div> 
     <h1>Log In</h1>
 
-<form @submit.prevent="EntradaUsuario" >
+<form @submit.prevent="entradaUsuario" >
             <label for="email">e-mail</label>
         <input type="email" id="email" name="email" v-model="email"/>
         <label for="password">contraseña</label>
@@ -10,8 +10,8 @@
         <button type="submit">Enviar</button>
 </form>
 
-    <div>
-        <p>No tienes cuenta aún? <route-link to SignUp>Registrate!</route-link></p>
+        <div>
+    <p>No tienes cuenta aún? <route-link :to="({name:'signUp'})">Registrate!</route-link></p>
     </div>
     <div>
         <p>Has olvidado la contraseña? <route-link >Recuerda la contraseña</route-link></p>
@@ -25,20 +25,26 @@
 import {ref} from 'vue';
 import {login} from '../API';
 import {useAuthStore} from '../Store/auth';
+import {useRouter} from 'vue-router';
 
 //poner una alerta! comprovacion de que el usuario ha confirmado el mail si no nada
 //alerta! en caso de que hay error en caso de que contra y user no esten bien. 
 const email= ref();
 const password= ref();
 const authStore = useAuthStore();
+const redirectHome = useRouter();
 
-const EntradaUsuario = async () => {
+const entradaUsuario = async () => {
     const response = await login(email.value, password.value)
     // console.log(response)
-    authStore.login(response)
+    if (response){
+  authStore.login(response)
+    redirectHome.push({
+        name: 'home'
+    }); 
+    // alert('te redirijo a Home')
+}
 };
-
-
 
 </script>
 

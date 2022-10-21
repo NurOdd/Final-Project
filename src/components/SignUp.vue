@@ -12,6 +12,7 @@
         <input type="password" id="password2" name="password2" v-model="password2" />
         <button type="submit">Enviar</button>
 </form>
+<p>Ya estas registrado? Haz un <router-link :to="({name:'logIn'})">log In</router-link></p>
 </div>
 </template>
 
@@ -19,8 +20,9 @@
 
 <script setup>
 import {ref} from 'vue';
-import {login} from '../API';
+import {registro} from '../API';
 import {useAuthStore} from '../Store/auth';
+
 //crear formulario + funcion reactivo
 //submit formu envia a funcion registro (supabase)
 const email= ref();
@@ -29,10 +31,11 @@ const password2= ref();
 
 
 const SignUpUser = async () => {
-    if(password!=password2){
+    if(password.value!==password2.value){
         alert("la contraseña tiene que ser la misma")
     } else {
     const response = await registro(email.value, password.value)
+    alert("tu usuario ha sido registrado, revisa tu email")
 
     //  console.log(response)
     }
