@@ -1,0 +1,1 @@
+import{c as r,o as s}from"./file_index.0a7a072a.js";const _=(e,o)=>{const t=e.__vccOpts||e;for(const[c,n]of o)t[c]=n;return t},a={};function f(e,o){return s(),r("h1",null,"Home")}const m=_(a,[["render",f]]);export{m as default};
