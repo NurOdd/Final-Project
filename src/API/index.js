@@ -17,7 +17,12 @@ export const login = async (email, password) => {
         password
 
     })
-    return response.data.user.id
+    if (response.error){
+        console.log(response.error)
+        return false
+    }  
+    return response.data.user.id 
+
 }
 
 /*
