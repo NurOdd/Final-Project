@@ -1,7 +1,7 @@
 
 <template>
     <div>
-        <div>Sign Up</div>
+        <div>Registro</div>
         <div></div>
         <div></div>
         <div></div>
@@ -10,6 +10,12 @@
 
 
 <script setup>
+
+import {registro} from "../API"
+//crear formulario + funcion reactivo
+//submit formu envia a funcion registro (supabase)
+
+
 </script>
 
 
