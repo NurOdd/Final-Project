@@ -16,7 +16,6 @@
     <div>
         <p>Has olvidado la contraseña? <route-link >Recuerda la contraseña</route-link></p>
     </div>
-
 </div>
 <!--  routa link ahome -->
 </template>
@@ -29,8 +28,10 @@ import {useRouter} from 'vue-router';
 
 //poner una alerta! comprovacion de que el usuario ha confirmado el mail si no nada
 //alerta! en caso de que hay error en caso de que contra y user no esten bien. 
-const email= ref();
-const password= ref();
+
+//TODO acordarse de quitar la contraseña y el usuario para practicar
+const email= ref('nurietta@gmail.com');
+const password= ref('12345678');
 const authStore = useAuthStore();
 const redirectHome = useRouter();
 

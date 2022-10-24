@@ -1,10 +1,12 @@
 
 <template>
-<h1>Welcome Page</h1>
+    <body>
+      <h1>Welcome Page</h1>
 <h2>prueba</h2>
+<p>lorem ipsum asidnasdknasd uhasld  ulnjas</p>
  <router-view/>
-<!-- pagina de entrada donde hacer log in y sign up -->
-
+<!-- pagina de entrada donde hacer log in y sign up -->  
+    </body>
 </template>
 
 
@@ -16,4 +18,44 @@
 
 
 <style scoped>
+body {
+    background-color: #d6d592;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    color: #5d6e27
+}
+h2 {
+
+    color: #9fa856 
+}
+h4{
+    /*  toque de color basico */
+    color: #ffffea}
+h5{
+
+     /*  accento de color */
+    color: #ffdc7c
+}
+
 </style>
+
+ <!-- ColorChart
+    basic color > #d6d592
+
+    color principal > #5d6e27
+    
+    color secundario > #9fa856 
+
+    toque de color basico > #ffffea
+
+    accento de color > #ffdc7c 
+ -->
+    
+    
+    
+    
+    
