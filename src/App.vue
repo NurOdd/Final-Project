@@ -11,11 +11,11 @@
 
 
 <style scoped>
-body {
-    background-color: #d6d592;
+/* body {
+    background-color: #90A22D;
     margin: 0px;
     padding: 0px;
     height: 100vh;
-}
+} */
 
 </style>

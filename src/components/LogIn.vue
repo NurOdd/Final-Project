@@ -1,6 +1,6 @@
 <template>
 <div> 
-    <h1>Log In</h1>
+    <h1>Inicia sesión</h1>
 
 <form @submit.prevent="entradaUsuario" >
             <label for="email">e-mail</label>
@@ -11,10 +11,10 @@
 </form>
 
         <div>
-    <p>No tienes cuenta aún? <route-link :to="({name:'signUp'})">Registrate!</route-link></p>
+    <p>No tienes cuenta aún? <router-link :to="({name:'signUp'})">Registrate!</router-link></p>
     </div>
     <div>
-        <p>Has olvidado la contraseña? <route-link >Recuerda la contraseña</route-link></p>
+        <p>Has olvidado la contraseña? <router-link >Recuerda la contraseña</router-link></p>
     </div>
 </div>
 <!--  routa link ahome -->
@@ -44,9 +44,9 @@ const entradaUsuario = async () => {
         name: 'home'
     }); 
     // alert('te redirijo a Home')
-}
+} else {alert ('¡Parece que ha habido un error! Por favor, comprueba que el correo y la contraseña sean los correctos')}
 };
-
+//TODO Hay opción de hacer aparecer este mensaje como un div? Creo que quedaria más bonito
 </script>
 
 <style scoped>
