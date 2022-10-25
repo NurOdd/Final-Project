@@ -12,7 +12,7 @@
         <input type="password" id="password2" name="password2" v-model="password2" />
         <button type="submit">Enviar</button>
 </form>
-<p>Ya estas registrado? Haz un <router-link :to="({name:'logIn'})">log In</router-link></p>
+<p>Ya estas registrado?  <router-link :to="({name:'logIn'})">Inicia sesión</router-link></p>
 </div>
 </template>
 
@@ -22,6 +22,7 @@
 import {ref} from 'vue';
 import {registro} from '../API';
 import {useAuthStore} from '../Store/auth';
+import {useRouter} from 'vue-router';
 
 //crear formulario + funcion reactivo
 //submit formu envia a funcion registro (supabase)

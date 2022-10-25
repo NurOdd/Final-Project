@@ -1,10 +1,12 @@
 
 <template>
     <body>
-      <h1>Welcome Page</h1>
-<h2>prueba</h2>
-<p>lorem ipsum asidnasdknasd uhasld  ulnjas</p>
- <router-view/>
+        <div>
+            <h1>Welcome Page</h1>
+            <h2>prueba</h2>
+            <p>lorem ipsum asidnasdknasd uhasld  ulnjas</p>
+            <router-view/>
+        </div>
 <!-- pagina de entrada donde hacer log in y sign up -->  
     </body>
 </template>
@@ -32,14 +34,7 @@ h2 {
 
     color: #9fa856 
 }
-h4{
-    /*  toque de color basico */
-    color: #ffffea}
-h5{
 
-     /*  accento de color */
-    color: #ffdc7c
-}
 
 </style>
 
