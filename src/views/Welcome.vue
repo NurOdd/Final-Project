@@ -12,9 +12,10 @@
 
 
 <script setup>
-// import SignUp from '../components/SignUp.vue'
-// import createRouter from 'vue-router'
-// import LogIn from '../components/LogIn.vue'
+import SignUp from '../components/SignUp.vue'
+import {createRouter} from 'vue-router'
+import LogIn from '../components/LogIn.vue'
+
 </script>
 
 

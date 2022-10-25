@@ -5,7 +5,8 @@
 
 </template>
 <script setup>
-
+// import {createClient} from "@supabase/supabase-js"
+// import {onMounted}
 
 </script>
 
