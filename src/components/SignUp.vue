@@ -6,7 +6,7 @@
 >
   <!-- component -->
   <section class="flex w-[30rem] flex-col space-y-10">
-    <div class="text-center text-4xl font-medium">Log In</div>
+    <div class="text-center text-4xl font-medium">Sign Up</div>
 
     <div
       class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
@@ -54,12 +54,11 @@
     >
 
     <p class="text-center text-lg">
-      No account?
-      <a
-        href="#"
+      You already have an account?
+      <router-link :to="({name:'logIn'})"
         class="font-medium text-indigo-500 underline-offset-4 hover:underline"
-        >Create One</a
-      >
+        >Log in</router-link>
+      
     </p>
   </section>
 </main>

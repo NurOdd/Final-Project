@@ -1,16 +1,11 @@
 
 <template>
     <body>
-        <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
-        <div class="centralDiv">
+ 
             <h1>Welcome Page</h1>
-            <h2>prueba</h2>
-            <p>lorem ipsum asidnasdknasd uhasld  ulnjas</p>
             <router-view/>
             <!-- <img src="../images/grass.png" alt="grass-bottom"> -->
-        </div>
+
 <!-- pagina de entrada donde hacer log in y sign up -->  
     </body>
 </template>
