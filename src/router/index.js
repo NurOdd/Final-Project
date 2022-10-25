@@ -8,19 +8,18 @@ const routes = [
         redirect: {
             name: 'signUp'
         },
-        children: [{
-            path: 'login',
-            name: 'logIn',
-            component: () => import ("../components/LogIn.vue"),
+            children: [{
+                 path: 'login',
+                 name: 'logIn',
+                 component: () => import ("../components/LogIn.vue"),
     
-        },
-        {
-            path: 'signup',
-            name: 'signUp',
-            component: () => import ("../components/SignUp.vue"),
-            
-    
-        }]
+                },
+                
+                {
+                path: 'signup',
+                name: 'signUp',
+                component: () => import ("../components/SignUp.vue"),
+                }]
 
     },
     

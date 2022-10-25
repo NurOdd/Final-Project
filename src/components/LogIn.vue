@@ -1,64 +1,7 @@
 <template>
-<div> 
+
+    <!-- Por alguna razon no me aparece la información completa y va repitiendo la primera parte del template -->
     <h1>Inicia sesión</h1>
-
-    <section class="flex w-[30rem] flex-col space-y-10">
-    <div class="text-center text-4xl font-medium">Sign Up</div>
-
-    <div
-      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-    >
-      <input
-        type="mail"
-        placeholder="Email"
-        class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-        v-model="email"
-      />
-    </div>
-
-    <div
-      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-    >
-      <input
-        type="password"
-        placeholder="Password"
-        class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-        v-model="password"
-      />
-    </div>
-    <div
-      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-    >
-      <input
-        type="password"
-        placeholder="Confirm Password"
-        class="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-        v-model="password2"
-      />
-    </div>
-
-    <button
-      class="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
-      @click="SignUpUser"
-    >
-      Enviar
-    </button>
-
-    <a
-      href="#"
-      class="transform text-center font-semibold text-gray-500 duration-300 hover:text-gray-300"
-      >FORGOT PASSWORD?</a
-    >
-
-    <p class="text-center text-lg">
-      You already have an account?
-      <a
-        href="#"
-        class="font-medium text-indigo-500 underline-offset-4 hover:underline"
-        >Log in</a
-      >
-    </p>
-  </section>
 
 <form @submit.prevent="entradaUsuario" >
             <label for="email">e-mail</label>
@@ -73,8 +16,9 @@
     </div>
     <div>
         <p>Has olvidado la contraseña? <router-link >Recuerda la contraseña</router-link></p>
-    </div>
 </div>
+
+
 <!--  routa link ahome -->
 </template>
 

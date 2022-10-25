@@ -4,7 +4,7 @@
 <main
   class="mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white"
 >
-  <!-- component -->
+
   <section class="flex w-[30rem] flex-col space-y-10">
     <div class="text-center text-4xl font-medium">Sign Up</div>
 
@@ -42,7 +42,7 @@
 
     <button
       class="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
-      @click="SignUpUser"
+      @click.prevent="SignUpUser"
     >
       Enviar
     </button>
@@ -52,7 +52,7 @@
       class="transform text-center font-semibold text-gray-500 duration-300 hover:text-gray-300"
       >FORGOT PASSWORD?</a
     >
-
+<!-- TODO por alguna razon, cuando cambio de componente desde aquí no me muestra nada del login -->
     <p class="text-center text-lg">
       You already have an account?
       <router-link :to="({name:'logIn'})"
@@ -62,6 +62,8 @@
     </p>
   </section>
 </main>
+
+<!-- parte antigua q si funcionaba -->
  <div>
     <h1>Registro de Usuario</h1>
 <form @submit.prevent="SignUpUser" >
@@ -74,7 +76,7 @@
         <input type="password" id="password2" name="password2" v-model="password2" />
         <button type="submit">Enviar</button>
 </form>
-<p>Ya estas registrado?  <router-link :to="({name:'logIn'})">Inicia sesión</router-link></p>
+<p>Ya estas registrado?  <router-link :to="({name:'logIn'})">Inicia sesión </router-link> </p>
 </div>
 
 </template>
@@ -85,6 +87,7 @@
 import {ref} from 'vue';
 import {registro} from '../API';
 import {useAuthStore} from '../Store/auth';
+
 
 //crear formulario + funcion reactivo
 //submit formu envia a funcion registro (supabase)
