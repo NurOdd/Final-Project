@@ -19,6 +19,8 @@
     import {ref} from 'vue';
     import {newTask} from '../API';
     import {useTaskStore} from '../Store/task';
+
+
    
     const title= ref();
     const description= ref();
@@ -29,12 +31,8 @@
     const crearNuevaTarea = async () => {
         const response = await newTask(title.value, description.value, tag.value)
         /console.log(response)
-        // if (response){
       taskStore.addTask(response)
-        // redirectHome.push({
-        //     name: 'home'
-        // }); 
-        // alert('te redirijo a Home')
+
     }
     // };
     

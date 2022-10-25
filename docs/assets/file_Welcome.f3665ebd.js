@@ -1,1 +1,0 @@
-import{_ as a,r as c,o as s,c as d,a as n,p,b as r,d as o}from"./file_index.e66c79d2.js";const t=e=>(p("data-v-55d08a5d"),e=e(),r(),e),l=t(()=>o("h1",null,"Welcome Page",-1)),u=t(()=>o("h2",null,"prueba",-1)),m={__name:"Welcome",setup(e){return(i,h)=>{const _=c("router-view");return s(),d("body",null,[l,u,n(_)])}}},f=a(m,[["__scopeId","data-v-55d08a5d"]]);export{f as default};
