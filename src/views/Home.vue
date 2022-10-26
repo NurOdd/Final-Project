@@ -5,13 +5,14 @@
 
     <h1>Home</h1>
     <Navbar/>
-    <NewTask/>
-    <Task/>
+    <Board/>
 </div>
 </template>
 
 <script setup>
 import Navbar from '../components/Navbar.vue';
+import Board from '../views/Board.vue';
+import {useRouter} from 'vue-router';
 import Task from '../components/Task.vue';
 import NewTask from '../components/NewTask.vue';
 
