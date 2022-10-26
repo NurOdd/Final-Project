@@ -1,6 +1,6 @@
 <template>
   <h1>Created Task</h1>
-
+<!-- 
   <div class="max-w-sm rounded overflow-hidden shadow-lg">
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ prop.task.title }}</div>
@@ -10,6 +10,7 @@
         >{{ prop.task.tag }}</span
       >
     </div>
+
     <div class="px-6 pt-4 pb-2">
       <button
         @click="finishTask"
@@ -30,7 +31,7 @@
         Delete
       </button>
     </div>
-  </div>
+  </div> -->
   <!-- <div>
     <form @submit.prevent="crearNuevaTarea" >
                 <label for="title">titulo</label>
@@ -50,10 +51,11 @@ import { ref } from "vue";
 import { updateTask } from "../API";
 import { deleteTask } from "../API";
 
+
 //TODO arreglar el defineProps creo q pq no está vinculado (revisar funcionamiento de los props)
 
 const prop = defineProps({
-  task: object,
+  task: Object,
 });
 
 //TODO mirar como hacer que se ponga más opaco? greyscale? tachado? opciones opciones! + mensaje de bien hecho!)

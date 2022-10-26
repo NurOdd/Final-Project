@@ -45,10 +45,13 @@ export const getTasks = async () => {
         .from('task')
         .select('*')
         .order('id', { ascending: false })
-    console.log(response)
-    // TODO retornar la informacion de los task, ej response.data
-}
+        if (response.error) {console.log (response.error)}
+        return (response.data)
 
+  //  console.log(response)
+    // TODO retornar la informacion de los task, ej response.data
+ 
+}   
 /*
 task: {
             title: 'Titulo modificado',

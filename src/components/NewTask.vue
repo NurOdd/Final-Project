@@ -1,7 +1,8 @@
 <template>
+<h1>New task</h1>
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
  <div class="px-6 py-4">
-  <input type="text" v-model="task.title" placeholder = "Title" class="font-bold text-xl mb-2">
+  <input type="text" v-model="task.title" placeholder ="Title" class="font-bold text-xl mb-2">
   <input type="textarea" v-model="task.description" placeholder ="Description" class="text-gray-700 text-base">        
  <input type="text" v-model="task.tag" placeholder="Tags" class="text-gray-700 text-base">
 </div>
@@ -18,16 +19,16 @@ import {useAuthStore} from '../store/auth'
 
 const store = useAuthStore()
 
-  const info = ref ({
+  const task = ref ({
   user_id: store.id,
   title: "", 
   description: "",
   })
 
 const createNewTask = async () =>{
-  console.log(info.value)
-const response = await newTask (info.value)
-  console.log (info.value)
+  console.log(task.value)
+const response = await newTask (task.value)
+  console.log (task.value)
 }
 </script>
 
