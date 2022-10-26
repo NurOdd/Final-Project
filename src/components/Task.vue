@@ -11,16 +11,7 @@
       >
     </div>
 
-    <!-- pantalla de edición -->
-    <div class="px-6 py-4"  v-if="changeTask==true">
-      <input type="text" v-model="task.title" placeholder ="Title" class="font-bold text-xl mb-2">
-      <input type="textarea" v-model="task.description" placeholder ="Description" class="text-gray-700 text-base">        
-      <input type="text" v-model="task.tag" placeholder="Tags" class="text-gray-700 text-base">
-
-      <button @click="editTask"> Guardar Cambios</button>
-    </div>
-
-    <div class="px-6 pt-4 pb-2">
+    <div class="px-6 pt-4 pb-2"  v-if="changeTask==false">
       <button
         @click="finishTask"
         class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -33,6 +24,7 @@
       >
         Edit
       </button>
+
       <button
         @click="removeTask"
         class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -40,7 +32,16 @@
         Delete
       </button>
     </div>
+
   </div>
+      <!-- pantalla de edición -->
+      <div class="px-6 py-4"  v-if="changeTask==true">
+      <input type="text" v-model="task.title" placeholder ="Title" class="font-bold text-xl mb-2">
+      <input type="textarea" v-model="task.description" placeholder ="Description" class="text-gray-700 text-base">        
+      <input type="text" v-model="task.tag" placeholder="Tags" class="text-gray-700 text-base">
+
+      <button @click="editTask" class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"> Guardar Cambios</button>
+    </div>
 
   <!--  routa link ahome -->
 </template>
@@ -61,7 +62,7 @@ const prop = defineProps({
 });
 
 //TODO mirar como hacer que se ponga más opaco? greyscale? tachado? opciones opciones! + mensaje de bien hecho!)
-// :class es dinamico segun la variable
+// :class es dinamico segun
 const finishTask = async () => {
   alert("Well done!");
 };

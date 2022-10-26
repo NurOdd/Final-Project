@@ -16,11 +16,15 @@
 import {ref} from 'vue';
 import {newTask} from '../API'
 import {useAuthStore} from '../store/auth'
+import {useTaskStore} from '../store/task'
 
-const store = useAuthStore()
+
+const taskStore= useTaskStore();
+
+const authStore = useAuthStore()
 
   const task = ref ({
-  user_id: store.id,
+  user_id: authStore.id,
   title: "", 
   description: "",
   })
@@ -28,6 +32,7 @@ const store = useAuthStore()
 const createNewTask = async () =>{
   console.log(task.value)
 const response = await newTask (task.value)
+taskStore.setTask();
   console.log (task.value)
 }
 </script>
