@@ -47,10 +47,10 @@
     >
 <!-- TODO por alguna razon, cuando cambio de componente desde aquí no me muestra nada del login -->
     <p class="text-center text-lg">
-      You already have an account?
+      Don't have an account?
       <router-link :to="({name:'signUp'})"
         class="font-medium text-indigo-500 underline-offset-4 hover:underline"
-        >Log in</router-link>
+        >Sign Up</router-link>
       
     </p>
   </section>

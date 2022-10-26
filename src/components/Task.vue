@@ -6,22 +6,18 @@
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
           
           <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Nueva Tarea</div>
-        <input type="text" id="title" name="title" v-model="title"/>
-            <label for="description">Descripción</label>
-            <input type="description" id="description" name="description" v-model="description" />
-            <label for="tag">Etiquetas</label>
-            <input type="tag" id="tag" name="tag" v-model="tag" />
-
+        <div class="font-bold text-xl mb-2">{{prop.task.title}}</div>
+        <p class="text-gray-600 text-base">{{prop.task.description}}</p>
+        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{prop.task.tag}}</span>
   </div>
   <div class="px-6 pt-4 pb-2">
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+    <button class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Done</button>
+    <button class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Edit</button>
+    <button class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Delete</button>
   </div>
 
     </div>
-<div>
+    <!-- <div>
     <form @submit.prevent="crearNuevaTarea" >
                 <label for="title">titulo</label>
             <input type="text" id="title" name="title" v-model="title"/>
@@ -31,19 +27,19 @@
             <input type="tag" id="tag" name="tag" v-model="tag" />
             <button type="submit">Nueva Tarea</button>
     </form>    
-    </div>
+    </div> -->
     <!--  routa link ahome -->
     </template>
     
     <script setup>
     import {ref} from 'vue';
-    import {newTask} from '../API';
-    import {useTaskStore} from '../Store/task';
+    import {updateTask} from '../API';
+    import {deleteTask} from '../API';
    
     const title= ref();
     const description= ref();
     const tag= ref();
-    const taskStore = useTaskStore();
+    // const taskStore = useTaskStore();
     
     
     const crearNuevaTarea = async () => {
