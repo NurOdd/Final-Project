@@ -1,0 +1,1 @@
+import{_ as c,r as t,o as _,c as s,a,p,b as n,d as r}from"./file_index.ae07dfbb.js";const l=e=>(p("data-v-414e4ec0"),e=e(),n(),e),d=l(()=>r("h1",null,"Welcome Page",-1)),m={__name:"Welcome",setup(e){return(u,i)=>{const o=t("router-view");return _(),s("body",null,[d,a(o)])}}},h=c(m,[["__scopeId","data-v-414e4ec0"]]);export{h as default};

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { updateTask } from '../api'
+import { getTasks, updateTask } from '../api'
 
 export const useTaskStore = defineStore('task', {
     // arrow function recommended for full type inference
@@ -12,8 +12,13 @@ export const useTaskStore = defineStore('task', {
     },
     actions: {
 
-        setTask() {
+        async setTask() {
+
             //TODO guardar en el stado las task que nos de supabase
+            this.tasks = await getTasks()
+            console.log("3", this.tasks)
+            return (this.tasks)
+
         },
 
         updateTask(id, task) {
@@ -35,3 +40,5 @@ export const useTaskStore = defineStore('task', {
 
     }
 })
+
+//TODO a futuro minimizar las peticiones al servidor como buena practica (eso son cosas de senior no de junior)

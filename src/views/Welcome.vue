@@ -1,27 +1,27 @@
 
 <template>
     <body>
-        <div>
+ 
             <h1>Welcome Page</h1>
-            <h2>prueba</h2>
-            <p>lorem ipsum asidnasdknasd uhasld  ulnjas</p>
             <router-view/>
-        </div>
+            <!-- <img src="../images/grass.png" alt="grass-bottom"> -->
+
 <!-- pagina de entrada donde hacer log in y sign up -->  
     </body>
 </template>
 
 
 <script setup>
-// import SignUp from '../components/SignUp.vue'
-// import createRouter from 'vue-router'
-// import LogIn from '../components/LogIn.vue'
+import SignUp from '../components/SignUp.vue'
+import {createRouter} from 'vue-router'
+import LogIn from '../components/LogIn.vue'
+
 </script>
 
 
 <style scoped>
-body {
-    background-color: #d6d592;
+/* body {
+    background-color: #99B400;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -35,6 +35,16 @@ h2 {
     color: #9fa856 
 }
 
+.centralDiv{
+
+    margin: 10%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    background-color: #ECEDB3;
+    border-radius: 50px;
+
+} */
 
 </style>
 
