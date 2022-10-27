@@ -4,7 +4,7 @@
     <h1>Inicia sesión</h1>
 
     <main
-  class="mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white"
+  class="mx-auto flex min-h-screen w-full items-center justify-center bg-green-500 text-white"
 >
 
   <section class="flex w-[30rem] flex-col space-y-10">
