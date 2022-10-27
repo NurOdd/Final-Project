@@ -1,6 +1,6 @@
 <template>
 <!-- pagina donde irán las task  -->   
- <div class="homeDiv">
+ <div class="bg-green-100">
 <!-- <RouterView/> -->
     <Navbar/>
     <Board/>
@@ -20,8 +20,5 @@ import NewTask from '../components/NewTask.vue';
 </script>
 
 <style scoped>
-.homeDiv{
-background-color: coral;
 
-}
 </style>
