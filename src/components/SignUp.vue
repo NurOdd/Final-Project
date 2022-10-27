@@ -5,10 +5,11 @@
   >
   <div >
   <div class="flex w-[30rem] flex-col space-y-10 bg-green-800 mb-8 ">
+    <span><br></span>
         <h1 class=" text-center  text-4xl font-medium">Cozy Task</h1>
-        <p>
-          Welcome! <br />
-          Please take a seat, a cup of your favourite tea, put some music on, and be prepare to work on
+        <h2 class="text-xl">
+          Welcome! </h2>
+          <p>Please take a seat, a cup of your favourite tea, put some music on, and be prepare to work on
           all your projects.<br />
           <span><br></span>
           We hope that this app will make it more pleaseful to visualize and
@@ -18,8 +19,9 @@
       </div>
     <section class="flex w-[30rem] flex-col space-y-10 bg-green-900">
       <div>
+        <span><br></span>
         <div class="text-center text-4xl font-medium">Sign Up</div>
-
+        <span><br></span>
         <div
           class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-green-500"
         >
@@ -60,21 +62,16 @@
         </button>
       </div>
  
-
-      <a
-        href="#"
-        class="transform text-center font-semibold text-green-400 duration-300 hover:text-green-200"
-        >FORGOT PASSWORD?</a
-      >
       <!-- TODO por alguna razon, cuando cambio de componente desde aquí no me muestra nada del login -->
       <p class="text-center text-lg">
         You already have an account?
         <router-link
           :to="{ name: 'logIn' }"
           class="font-medium text-green-500 underline-offset-4 hover:underline"
-          >Log in
+          >Click me to Log in
         </router-link>
       </p>
+      <span><br></span>
       
     </section>
   </div>
