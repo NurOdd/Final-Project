@@ -1,8 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Pangolin&family=Roboto&display=swap');
+
+*{
+    font-family: 'Amatic SC', cursive; 
+    font-family: 'Pangolin', cursive;
+    /* font-family: 'Roboto', sans-serif; */
+}
 
 :root{
+ 
     --textoprincipal: red; 
 
     /* en la parte del codigo q quieres modificar hay que meter class {color :var(--textoprincipal) */

@@ -2,8 +2,6 @@
 <!-- pagina donde irán las task  -->   
  <div class="homeDiv">
 <!-- <RouterView/> -->
-
-    <h1>Home</h1>
     <Navbar/>
     <Board/>
 
