@@ -4,14 +4,14 @@
     <h1>Inicia sesión</h1>
 
     <main
-  class="mx-auto flex min-h-screen w-full items-center justify-center bg-green-500 text-white"
+  class="mx-auto flex min-h-screen w-full items-center justify-center bg-green-800 text-white"
 >
 
   <section class="flex w-[30rem] flex-col space-y-10">
     <div class="text-center text-4xl font-medium">Log in</div>
 
     <div
-      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-green-500"
     >
       <input
         type="mail"
@@ -22,7 +22,7 @@
     </div>
 
     <div
-      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
+      class="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-green-500"
     >
       <input
         type="password"
@@ -34,28 +34,27 @@
   
 
     <button
-      class="transform rounded-sm bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
-      @click.prevent="SignUpUser"
+      class="transform rounded-sm bg-green-600 py-2 font-bold duration-300 hover:bg-green-400"
+      @click.prevent="entradaUsuario"
     >
       Enviar
     </button>
 
     <a
       href="#"
-      class="transform text-center font-semibold text-gray-500 duration-300 hover:text-gray-300"
+      class="transform text-center font-semibold text-green-500 duration-300 hover:text-green-300"
       >FORGOT PASSWORD?</a
     >
 <!-- TODO por alguna razon, cuando cambio de componente desde aquí no me muestra nada del login -->
     <p class="text-center text-lg">
       Don't have an account?
       <router-link :to="({name:'signUp'})"
-        class="font-medium text-indigo-500 underline-offset-4 hover:underline"
+        class="font-medium text-green-500 underline-offset-4 hover:underline"
         >Sign Up</router-link>
       
     </p>
   </section>
 </main>
-
 <!-- 
 <form @submit.prevent="entradaUsuario" >
             <label for="email">e-mail</label>
@@ -70,7 +69,7 @@
     </div>
     <div>
         <p>Has olvidado la contraseña? <span >Recuerda la contraseña</span></p>
-</div> -->
+</div> --> -->
 
 
 <!--  routa link ahome -->

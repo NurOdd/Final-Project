@@ -43,7 +43,7 @@ import { useRouter } from 'vue-router';
 import { logOut } from '../API'
 
 
-const redirectWelcome = useRouter();
+const redirectLogIn = useRouter();
 const authStore = useAuthStore();
 
 const userOut = async () => {
@@ -52,8 +52,8 @@ const userOut = async () => {
     //confirm ok
     authStore.logout()
     console.log('has hecho el logout con exito')
-    redirectWelcome.push({
-        name: 'welcome'
+    redirectLogIn.push({
+        name: 'logIn'
     });
 
 
