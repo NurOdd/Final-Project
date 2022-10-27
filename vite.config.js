@@ -18,5 +18,10 @@ build: {
 },
 //comprobar si estamos en produccion y la base es el nombre del repositorio, si no es la raiz
 //condicion ? "nombre-repositorio" : "/"
-  base: process.env.NODE_ENV === 'production' ? '/Final-project/' : '/'
+  base: process.env.NODE_ENV === 'production' ? '/Final-Project/' : '/',
+  server: {
+    base: process.env.NODE_ENV === 'production' ? '/Final-Project/' : '/'
+  }
+
+  
 })

@@ -1,1 +1,0 @@
-import"./file_auth.d5645fad.js";import{_ as t,r as _,o as a,c,a as s,p,b as r,d as n}from"./file_index.120951b5.js";const l=e=>(p("data-v-46f80a40"),e=e(),r(),e),d=l(()=>n("h1",null,"Welcome Page",-1)),m={__name:"Welcome",setup(e){return(u,i)=>{const o=_("router-view");return a(),c("body",null,[d,s(o)])}}},h=t(m,[["__scopeId","data-v-46f80a40"]]);export{h as default};
