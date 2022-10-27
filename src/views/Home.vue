@@ -1,10 +1,9 @@
 <template>
 <!-- pagina donde irán las task  -->   
- <div class="bg-green-100">
-<!-- <RouterView/> -->
-    <Navbar/>
-    <Board/>
+<Navbar/>
 
+ <div class="bg-green-100">
+    <Board/>
 </div>
 </template>
 

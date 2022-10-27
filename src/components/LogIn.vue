@@ -56,7 +56,7 @@
   </section>
 </main>
 
-
+<!-- 
 <form @submit.prevent="entradaUsuario" >
             <label for="email">e-mail</label>
         <input type="email" id="email" name="email" v-model="email"/>
@@ -70,7 +70,7 @@
     </div>
     <div>
         <p>Has olvidado la contraseña? <span >Recuerda la contraseña</span></p>
-</div>
+</div> -->
 
 
 <!--  routa link ahome -->

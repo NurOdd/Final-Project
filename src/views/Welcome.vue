@@ -2,7 +2,7 @@
 <template>
     <body>
  
-            <h1>Welcome Page</h1>
+        
             <router-view/>
             <!-- <img src="../images/grass.png" alt="grass-bottom"> -->
 

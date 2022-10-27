@@ -36,7 +36,7 @@
 import { ref } from "vue";
 import { newTask } from "../API";
 import { useAuthStore } from "../store/auth";
-import { useTaskStore } from "../store/task";
+import { useTaskStore } from "../Store/task";
 
 const taskStore = useTaskStore();
 

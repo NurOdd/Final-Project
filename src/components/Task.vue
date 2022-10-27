@@ -83,7 +83,5 @@ const removeTask = async () => {
 </script>
 
 <style scoped>
-#postIt {
-background-color: burlywood;
-}
+
 </style>
