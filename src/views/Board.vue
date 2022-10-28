@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-fixed" style="background-image: url(https://i.pinimg.com/564x/36/3f/d9/363fd9159ff7a0fa9466726a071a4ca9.jpg);">
     <div>
       <NewTask />
     </div>

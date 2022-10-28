@@ -1,13 +1,15 @@
 <template>
 
     <!-- Por alguna razon no me aparece la información completa y va repitiendo la primera parte del template -->
-    <h1>Inicia sesión</h1>
+  
 
     <main
-  class="mx-auto flex min-h-screen w-full items-center justify-center bg-green-800 text-white"
+  class="mx-auto flex min-h-screen w-full items-center justify-center text-white bg-fixed"
+  style="background-image: url(https://i.pinimg.com/564x/48/56/7a/48567a38b7176af7d2c48cc4b650bc02.jpg);"
 >
 
-  <section class="flex w-[30rem] flex-col space-y-10">
+  <section class="flex w-[30rem] flex-col space-y-10 bg-green-800">
+    <span><br></span>
     <div class="text-center text-4xl font-medium">Log in</div>
 
     <div
@@ -37,7 +39,7 @@
       class="transform rounded-sm bg-green-600 py-2 font-bold duration-300 hover:bg-green-400"
       @click.prevent="entradaUsuario"
     >
-      Enviar
+      Submit
     </button>
 
     <a
@@ -53,6 +55,7 @@
         >Sign Up</router-link>
       
     </p>
+    <span><br></span>
   </section>
 </main>
 <!-- 
@@ -69,7 +72,7 @@
     </div>
     <div>
         <p>Has olvidado la contraseña? <span >Recuerda la contraseña</span></p>
-</div> --> -->
+</div> --> 
 
 
 <!--  routa link ahome -->

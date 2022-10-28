@@ -1,6 +1,6 @@
 <template>
   
-  <div class="max-w-sm rounded overflow-hidden shadow-lg" id="postIt">
+  <div class="max-w-sm rounded overflow-hidden shadow-lg postIt">
     <div class="px-6 py-4" v-if="changeTask==false">
       <div class="font-bold text-xl mb-2">{{ prop.task.title }}</div>
       <p class="text-gray-600 text-base">{{ prop.task.description }}</p>
@@ -83,5 +83,8 @@ const removeTask = async () => {
 </script>
 
 <style scoped>
+.postIt{
+background-color: #738f3ecf;
+}
 
 </style>
