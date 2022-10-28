@@ -1,7 +1,8 @@
 <template>
   
   <div class="max-w-sm rounded overflow-hidden shadow-lg postIt">
-    <div class="px-6 py-4" v-if="changeTask==false">
+
+    <div class="px-6 py-4" v-if="changeTask==false" :class={classIsCompleted:prop.task.isCompleted}>
       <div class="font-bold text-xl mb-2">{{ prop.task.title }}</div>
       <p class="text-gray-600 text-base">{{ prop.task.description }}</p>
       <span
@@ -9,7 +10,7 @@
         >{{ prop.task.tag }}</span
       >
     </div>
-
+<!--cambiar status finishTask a   -->
     <div class="px-6 pt-4 pb-2"  v-if="changeTask==false">
       <button
         @click="finishTask"
@@ -34,7 +35,7 @@
 
   </div>
       <!-- pantalla de edición -->
-      <div class="max-w-sm rounded overflow-hidden shadow-lg" v-if="changeTask==true">
+      <div class="max-w-sm rounded overflow-hidden shadow-lg" v-if="changeTask==true" :class={classIsCompleted:prop.task.isCompleted}>
       <div class="px-6 py-4"  >
       <input type="text" v-model="task.title" placeholder ="Title" class="font-bold text-xl mb-2">
       <input type="textarea" v-model="task.description" placeholder ="Description" class="text-gray-700 text-base">        
@@ -49,13 +50,12 @@
 
 <script setup>
 import { ref } from "vue";
-import { updateTask } from "../API";
-import { deleteTask } from "../API";
+import { updateTask, doneTask, deleteTask } from "../API";
 import { useTaskStore} from "../Store/task"
 
 const taskStore=useTaskStore();
 const changeTask = ref(false);
-
+// const doneTask = ref(false);
 //TODO arreglar el defineProps creo q pq no está vinculado (revisar funcionamiento de los props)
 
 const prop = defineProps({
@@ -65,6 +65,11 @@ const prop = defineProps({
 //TODO mirar como hacer que se ponga más opaco? greyscale? tachado? opciones opciones! + mensaje de bien hecho!)
 // :class es dinamico segun
 const finishTask = async () => {
+prop.task.isCompleted=!prop.task.isCompleted
+  const response = await doneTask(prop.task.id, prop.task.isCompleted);
+  console.log("Terminado?",response);
+  console.log("estado en supabase:", doneTask);
+  
   alert("Well done!");
 };
 
@@ -85,6 +90,10 @@ const removeTask = async () => {
 <style scoped>
 .postIt{
 background-color: #738f3ecf;
+}
+.classIsCompleted {
+  background-color: rgba(0, 100, 0, 0.802);
+  text-decoration: line-through;
 }
 
 </style>

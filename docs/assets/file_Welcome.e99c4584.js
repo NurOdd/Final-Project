@@ -1,1 +1,0 @@
-import"./file_auth.f962f6c1.js";import{_ as o,r as _,o as t,c,a as r}from"./file_index.0aa2f401.js";const s={__name:"Welcome",setup(n){return(a,p)=>{const e=_("router-view");return t(),c("body",null,[r(e)])}}},u=o(s,[["__scopeId","data-v-77f55429"]]);export{u as default};
