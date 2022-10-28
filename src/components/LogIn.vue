@@ -88,8 +88,8 @@ import {useRouter} from 'vue-router';
 //alerta! en caso de que hay error en caso de que contra y user no esten bien. 
 
 //TODO acordarse de quitar la contraseña y el usuario para practicar
-const email= ref('nurietta@gmail.com');
-const password= ref('12345678');
+const email= ref();
+const password= ref();
 const authStore = useAuthStore();
 const redirectHome = useRouter();
 
